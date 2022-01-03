@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE9E9"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:background="#FFE9E9"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textHome"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#FFE9E9"
+            android:paddingLeft="20dp"
+            android:paddingTop="50dp"
+            android:text="Hai, mau cari buku apa hari ini?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="378dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center"
+            android:hint="Masukkan kata kunci pencarian">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/buttonCari"
+            android:layout_width="373dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFAB40"
+            android:text="CARI" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFE9E9">
+
+        <TextView
+            android:id="@+id/textRekomendasiiii"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="45dp"
+            android:text="Buku Favoritku"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textLihatSemua2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="53dp"
+            android:layout_marginEnd="16dp"
+            android:text="Lihat Semua"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="234dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="17dp"
+        android:background="#FBD2D2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRekomendasiiii">
+
+        <ImageView
+            android:id="@+id/coverBuku"
+            android:layout_width="124dp"
+            android:layout_height="192dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="19dp"
+            android:src="@drawable/sebatas_mimpi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textPenulis"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="5dp"
+            android:text="Sebatas Mimpi"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textPenulis"
+            app:layout_constraintEnd_toStartOf="@+id/heart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textPenulis"
+            android:layout_width="99dp"
+            android:layout_height="23dp"
+            android:layout_marginEnd="116dp"
+            android:layout_marginBottom="12dp"
+            android:text="Eka Baharudin"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textDeskripsi"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textDeskripsi"
+            android:layout_width="189dp"
+            android:layout_height="89dp"
+            android:layout_marginEnd="24dp"
+            android:text="Lorem ipsum dolor sit amet,  consectetur adipiscing elit, sed  do eiusmod tempor incididunt ut  labore et dolore magna aliqua."
+            app:layout_constraintBottom_toTopOf="@+id/buttonBeli"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/rating"
+            android:layout_width="77dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="19dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonBeli"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/coverBuku"
+            app:layout_constraintTop_toBottomOf="@+id/textDeskripsi"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/rating" />
+
+        <Button
+            android:id="@+id/buttonBeli"
+            android:layout_width="107dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="127dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="9dp"
+            android:backgroundTint="#FFAB40"
+            android:text="BELI"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heart"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="32dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/textDeskripsi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/heart_check" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:background="#FFE9E9">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="45dp"
+            android:text="Rekomendasi"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="85dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginEnd="16dp"
+            android:text="Lihat Semua"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+
+</LinearLayout>
